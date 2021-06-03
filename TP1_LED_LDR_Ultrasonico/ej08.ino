@@ -12,10 +12,10 @@ void setup(){
 
 void loop(){
   int luz = analogRead(LDR);
+  luz = map(luz, 400, 1024, 0, 255); 
   Serial.print("Luminosidad: ");
   Serial.println(luz); 
-  delay(1000);
   analogWrite(rojo, luz);
   analogWrite(azul, luz);
-  analogWrite(verde, luz);
+  delay(100);
 }
