@@ -8,7 +8,7 @@ void setup(){
 
 void loop(){
   int luz = analogRead(LDR);
-  luz = map(luz, 366, 1018, 0, 255);  
+  luz = map(luz, 400, 1024, 0, 255);  
   Serial.print("Luminosidad: ");
   Serial.println(luz); 
   delay(1000);
